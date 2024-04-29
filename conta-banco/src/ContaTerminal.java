@@ -6,8 +6,8 @@ import javax.swing.JOptionPane;
 public class ContaTerminal {
     private static Scanner sc = new Scanner(System.in);
     private static HashMap<String, Conta> contas = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
-        
 
         String opcao;
 
@@ -46,10 +46,7 @@ public class ContaTerminal {
             }
         }
 
-        
     }
-
-    
 
     public static void criarconta() {
         System.out.print("Digite um nome para sua conta: ");
@@ -63,7 +60,6 @@ public class ContaTerminal {
         }
     }
 
-   
     public static void consultaSaldo() {
         System.out.print("Digite o nome da conta: ");
         String nome = sc.nextLine();
@@ -101,7 +97,6 @@ public class ContaTerminal {
         }
     }
 
-    
 }
 
 class Conta {
@@ -128,12 +123,12 @@ class Conta {
 
     public void sacar(double valor) {
 
-        if (valor > 0 && valor <=saldo ){
+        if (valor > 0 && valor <= saldo) {
             saldo -= valor;
             System.out.println("Saque realizado com sucesso! Saldo atual: " + saldo);
         } else {
             System.out.println("Valor inválido para saque ou saldo insuficiente.");
         }
-        
+
     }
 }
